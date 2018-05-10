@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/fonts/web-fonts-with-css/css/fontawesome-all.min.css">
 </head>
 <body>
+<a href="home">home</a>
     <form action="login" method="post">
     <div class="input-group mb-3">
         <div class="input-group-prepend">
@@ -20,11 +21,8 @@
             <span class="input-group-text" id="basic-addon1"><i class="fa fa-lock"></i></span>
         </div>
         <input class="form-control" type="password" id="pass" name="pass" placeholder="Password">
-        <input class="btn btn-primary" type="submit" value="Login">
-    </div>
-
-
-    
+        <input class="btn btn-primary" type="submit" value="Login" name="login">
+    </div>    
     </form>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.js"></script>
