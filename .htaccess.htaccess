@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+	ReWriteEngine on
+
+	ReWriteCond %{REQUEST_FILENAME} !-d
+	ReWriteCond %{REQUEST_FILENAME}\.php -f
+	ReWriteRule ^(.*)$ $1.php
+</IfModule>
