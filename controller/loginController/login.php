@@ -6,9 +6,9 @@ if(isset($_POST['login'])){ // button name login
     $password = $_POST['pass'];
     $ok=$login->login($username,$password);
     if ($ok){
-    header('location:../../view/index?id=' .$_SESSION['student_id']); // redirect page
+    header('location:../../view/index?id='.$_SESSION['student_id']); // redirect page
     }
     else{
-        header('location:../../index');
+        header('location:../../index?id=' .$_SESSION['student_id']);
     }
 }

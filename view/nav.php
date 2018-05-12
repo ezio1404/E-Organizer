@@ -13,7 +13,6 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Events</a>
       </li>
-      <?php if($_SESSION){ ?>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
            <?php
@@ -33,50 +32,7 @@
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
-    <?php } else{?>
-  <!-- Button trigger modal -->
 
-<button type="button"  class=" nav-link btn btn-light btn-outline-light" data-toggle="modal" data-target="#exampleModal">
-  Login
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form action="controller/loginController/login" method="post">
-          <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon1"><i class="fa fa-id-card"></i></span>
-              </div>
-                <input type="text" class="form-control" placeholder="Id Number" id="idno" name="idno" >
-                </div> 
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon1"><i class="fa fa-lock"></i></span>
-              </div>
-              <input class="form-control" type="password" id="pass" name="pass" placeholder="Password">
-              
-          </div>    
-          
-      </div>
-      <div class="modal-footer">
-        <input class="btn btn-primary" type="submit" value="Login" name="login">
-      </div>
-      </form>
-    </div>
-  </div>
-</div>
-<?php
-    }
-?>
 
 
   </div>

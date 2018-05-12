@@ -1,9 +1,9 @@
 <?php
-if($_SESSION){
-    $id=$_GET['id'];
-    include '../model/studentModel.php';
-    $student= new Student();
-    $info=$student->getStudById($id);
+// if($_SESSION){
+//     $id=$_GET['id'];
+//     include '../model/studentModel.php';
+//     $student= new Student();
+//     $info=$student->getStudById($id);
 ?>
 
 <!DOCTYPE html>
@@ -26,21 +26,21 @@ if($_SESSION){
             <div class="input-group-prepend">
                 <span class="input-group-text" id="inputGroup-sizing-default"><i class="fa fa-id-card"></i></span>
             </div>
-            <input type="text" class="form-control"  aria-describedby="inputGroup-sizing-default" value="<?php echo $id;?>">
+            <input type="text" class="form-control"  aria-describedby="inputGroup-sizing-default" value="<?php //echo $id;?>">
             <input type="text" class="form-control"  aria-describedby="inputGroup-sizing-default">    
         </div>
 
         <script src="assets/js/jquery.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <?php
-}
-else{
+// }
+// else{
 ?>
 
-        <?php
-    $message="Please Login";
-    header('location:../index?'.$message);
-          }
+    //     <?php
+    // $message="Please Login";
+    // header('location:../index?'.$message);
+    //       }
         ?>
 </body>
 
