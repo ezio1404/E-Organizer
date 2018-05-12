@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+
+if($_SESSION){
+
 ?>
 
 <!DOCTYPE html>
@@ -20,8 +23,19 @@ session_start();
     ?>
 
 
-  
+
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.js"></script>
+<?php
+}
+else{
+
+?>
+
+<?php
+    $message="Please Login";
+    header('location:../index?'.$message);
+}
+?>
 </body>
 </html>
