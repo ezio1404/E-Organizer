@@ -13,30 +13,9 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Events</a>
       </li>
-      <?php if($_SESSION){ ?>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           <?php
-              echo $_SESSION['student'];
-            ?>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="settings?id=<?php echo $_SESSION['student_id'];?>">Settings</a>
-          <form action="../controller/loginController/logout" method="post">
-            <input class="dropdown-item" type="submit" name="logout" id="logout" value="Logout">
-            </form>
-        </div>
-      </li>
-     
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-    <?php } else{?>
   <!-- Button trigger modal -->
-
-<button type="button"  class=" nav-link btn btn-light btn-outline-light" data-toggle="modal" data-target="#exampleModal">
+</ul>
+<button type="button"  class="text-dark nav-link btn btn-light btn-outline-light" data-toggle="modal" data-target="#exampleModal">
   Login
 </button>
 
@@ -74,9 +53,7 @@
     </div>
   </div>
 </div>
-<?php
-    }
-?>
+
 
 
   </div>

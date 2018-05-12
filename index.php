@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +15,7 @@ session_start();
 </head>
 <body>
     <?php
-         include('view/nav.php');
+         include('nav.php');
     ?>
     <!-- <form action="controller/loginController/login" method="post">
     <div class="input-group mb-3">
