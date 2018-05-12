@@ -1,6 +1,4 @@
-
 <?php
-//// database abstraction
 session_start();
 Class DBHelper{
     	//properties
@@ -25,7 +23,7 @@ function __construct(){
             if($stmt2->rowCount() > 0){
                 $_SESSION['student'] = $row2['fname'].' '.$row2['lname'];
                 $_SESSION['student_id'] = $row2['idno'];
-                echo "<script> window.location='home.php?$_SESSION[student]'; </script>";
+                echo "<script> window.location='index?$_SESSION[student]'; </script>";
                 $flag=true;
             }else{
                echo "<script> alert('Error'); </script>";

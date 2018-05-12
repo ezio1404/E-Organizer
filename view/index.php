@@ -1,6 +1,6 @@
 <?php
-// session_start();
-// if($_SESSION){
+session_start();
+if($_SESSION){
 ?>
 
 <!DOCTYPE html>
@@ -24,15 +24,15 @@
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
 <?php
-// }
-// else{
+}
+else{
 
 ?>
 asds
 <?php
-//     $message="Please Login";
-//     header('location:../index?'.$message);
-// }
+    $message="Please Login";
+    header('location:../index?'.$message);
+}
 ?>
 </body>
 </html>

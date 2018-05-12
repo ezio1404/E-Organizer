@@ -1,9 +1,10 @@
 <?php
-// if($_SESSION){
-//     $id=$_GET['id'];
-//     include '../model/studentModel.php';
-//     $student= new Student();
-//     $info=$student->getStudById($id);
+session_start();
+if($_SESSION){
+    $id=$_GET['id'];
+    include '../model/studentModel.php';
+    $student= new Student();
+    $info=$student->getStudById($id);
 ?>
 
 <!DOCTYPE html>
@@ -33,14 +34,14 @@
         <script src="assets/js/jquery.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <?php
-// }
-// else{
+}
+else{
 ?>
 
-    //     <?php
-    // $message="Please Login";
-    // header('location:../index?'.$message);
-    //       }
+      <?php
+    $message="Please Login";
+    header('location:../index?'.$message);
+          }
         ?>
 </body>
 

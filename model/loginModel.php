@@ -4,7 +4,7 @@ Class Login extends DBHelper{
     function __construct(){
         return DBHelper::__construct();
     }
-    function login($user,$pass){
-        return DBHelper::logginUser($user,$pass);
+    function login($idno,$pass){
+        return DBHelper::logginUser($idno,$pass);
     }
 }

@@ -1,14 +1,14 @@
 <?php
 require '../../model/loginModel.php';
-$login = new Login();
+$log = new Login();
 if(isset($_POST['login'])){ // button name login 
-    $username = $_POST['idno'];
-    $password = $_POST['pass'];
-    $ok=$login->login($username,$password);
+    $idno = $_POST['idno'];
+    $pass = $_POST['pass'];
+    $ok=$log->login($idno,$pass);
     if ($ok){
     header('location:../../view/index?id='.$_SESSION['student_id']); // redirect page
     }
     else{
-        header('location:../../index?id=' .$_SESSION['student_id']);
+        header('location:../../index?id=' . "asd");
     }
 }
