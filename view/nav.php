@@ -20,7 +20,6 @@
             ?>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="settings?id=<?php echo $_SESSION['student_id'];?>">Settings</a>
           <form action="../controller/loginController/logout" method="post">
             <input class="dropdown-item" type="submit" name="logout" id="logout" value="Logout">
             </form>
