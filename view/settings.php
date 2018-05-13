@@ -1,5 +1,4 @@
 <?php
-session_start();
 if($_SESSION){
     $id=$_GET['id'];
     include '../model/studentModel.php';

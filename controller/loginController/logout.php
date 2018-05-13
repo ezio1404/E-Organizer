@@ -2,8 +2,9 @@
 require_once ('../../model/db/dbhelper.php');
 if(isset($_POST['logout'])){
 session_destroy();
-unset($_SESSION['student_id']);
-unset($_SESSION['student']);
+unset($_SESSION['user_id']);
+unset($_SESSION['user_info']);
+unset($_SESSION['user_type']);
 header("location:../../index");
 }
 ?>

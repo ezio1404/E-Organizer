@@ -49,20 +49,33 @@ session_start();
       <div class="modal-body">
         <form action="controller/loginController/login" method="post">
           <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon1"><i class="fa fa-id-card"></i></span>
-              </div>
-                <input type="text" class="form-control" placeholder="Id Number" id="idno" name="idno" >
-                </div> 
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon1"><i class="fa fa-lock"></i></span>
-              </div>
-              <input class="form-control" type="password" id="pass" name="pass" placeholder="Password">
-              
+                <div class="input-group-prepend">
+                  <span class="input-group-text" ><i class="fa fa-id-card"></i></span>
+                </div>
+                  <input type="text" required class="form-control" placeholder="Id Number" id="idno" name="idno" >
+          </div> 
+          <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" ><i class="fa fa-lock"></i></span>
+                  </div>
+                    <input class="form-control" required type="password" id="pass" name="pass" placeholder="Password">
           </div>    
-          
-      </div>
+          <div class="input-group mb-3">
+          <div class="input-group-prepend">
+                    <span class="input-group-text" >
+                        <input type="radio" checked="checked" name="type" id="student" value="student">
+                    </span>
+                  </div>
+                    <label class="form-control" for="student">Student</label>
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" >
+                        <input type="radio" name="type" id="organizer" value="organizer">
+                    </span>
+                  </div>
+                    <label class="form-control" for="organizer">Organizer</label>       
+          </div> 
+
+       </div>
       <div class="modal-footer">
         <input class="btn btn-primary" type="submit" value="Login" name="login">
       </div>

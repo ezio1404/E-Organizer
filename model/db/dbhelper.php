@@ -14,16 +14,18 @@ function __construct(){
     }catch(PDOException $e){ echo $e->getMessage();}
 }
 // Login
-    function logginUser($user,$pass){
-        $flag=false;
-            $sql2 = "SELECT * FROM tbl_student WHERE idno = ? AND password = ?";
+    function logginUser($user,$pass,$type){
+            $flag=false;
+            $sql2="SELECT * FROM ".($type=="student"?"tbl_student":"tbl_organizer")." WHERE idno = ? AND password = ?";
+            // $sql2 = "SELECT * FROM tbl_student WHERE idno = ? AND password = ?";
             $stmt2 = $this->conn->prepare($sql2);
             $stmt2->execute(array($user,$pass));
             $row2 = $stmt2->fetch(PDO::FETCH_ASSOC);
             if($stmt2->rowCount() > 0){
-                $_SESSION['student'] = $row2['fname'].' '.$row2['lname'];
-                $_SESSION['student_id'] = $row2['idno'];
-                echo "<script> window.location='index?$_SESSION[student]'; </script>";
+                $_SESSION['user_info'] = $row2['fname'].' '.$row2['lname'];
+                $_SESSION['user_id'] = $row2['idno'];
+                $_SESSION['user_type']=$type;
+                echo "<script> window.location='index?$_SESSION[user_info]'; </script>";
                 $flag=true;
             }else{
                echo "<script> alert('Error'); </script>";
