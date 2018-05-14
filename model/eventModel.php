@@ -9,10 +9,9 @@ Class Event extends DBHelper{
         'event_start_time',
         'event_end_time',
         'event_venue',
-        'event_organizer',
         'event_guest',
+        'event_organizer',
         'event_avatar'
-
     );
 //constructor
     function __construct(){

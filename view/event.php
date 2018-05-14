@@ -21,7 +21,7 @@ if($_SESSION){
     <h2 class="header">
         Create Event
     </h2>
-    <form action="../controller/eventController/addEvent.php" method="POST">
+    <form action="../controller/eventController/addEvent.php" method="POST" enctype="multipart/form-data">
    <div class="form-group">
       <div class="row">
          <div class="col">
@@ -91,7 +91,26 @@ if($_SESSION){
          </div>
       </div>
    </div>
+   <div class="form-group">
+      <div class="row">
+         <div class="col">
+            <div class="input-group">
+               <div class="input-group-prepend">
+                  <label  class="input-group-text" for="event_guest">Number of Guest :</label>
+               </div>
+               <input type="number" class="form-control" id="event_guest" min=0  name="event_guest">
+            </div>
+         </div>
+      </div>
+   </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Upload Event Banner</span>
+        </div>
+            <input type="file" class="btn btn-light form-control text-left" name="event_avatar" accept="image/jpeg">
+    </div>
     <input type="number" hidden value="<?php echo $_SESSION['user_id'];?>" name="event_organizer"> 
+    <input class="btn btn-success" type="submit" value="Create" name="addEvent">
 </form>
     
 </div>

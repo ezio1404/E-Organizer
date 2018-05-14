@@ -45,7 +45,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -100,7 +100,7 @@
 ?>
      <div class="col-lg-4 col-sm-6 portfolio-item" style="padding: 10px 50px;">
             <div class="card h-100">
-              <img class="card-img-top" src="http://placehold.it/700x400" alt="">
+              <img class="card-img-top"  src="<?php echo $e['event_avatar'];?>" alt="<?php echo $e['event_avatar'];?>">
               <div class="card-body">
                 <h4 class="card-title">
                   <?php echo $e['event_title'];?>
