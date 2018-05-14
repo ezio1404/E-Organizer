@@ -3,14 +3,16 @@ require 'db/dbhelper.php';
 Class Event extends DBHelper{
     private $table = 'tbl_event';
     private $fields = array(
-        'event_id',
         'event_title',
         'event_desc',
         'event_date',
         'event_start_time',
         'event_end_time',
         'event_venue',
+        'event_organizer',
         'event_guest',
+        'event_avatar'
+
     );
 //constructor
     function __construct(){

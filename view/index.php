@@ -15,9 +15,16 @@ if($_SESSION){
     <link rel="stylesheet" href="assets/fonts/web-fonts-with-css/css/fontawesome-all.min.css">
 </head>
 <body>
-    <?php include('nav.php');
-    
-    ?>
+    <?php include('nav.php');?>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -26,10 +33,6 @@ if($_SESSION){
 <?php
 }
 else{
-
-?>
-asds
-<?php
     $message="Please Login";
     header('location:../index?'.$message);
 }

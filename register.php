@@ -1,9 +1,3 @@
-<?php
-  include 'model/eventModel.php';
-  $event= new Event();
-  $events=$event->getAllEvent();
-  $fields=$event->getFields();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,10 +21,10 @@
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       
       <li class="nav-item active">
-        <a class="nav-link" href="index">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="register">Register</a>
+        <a class="nav-link" href="#">Register <span class="sr-only">(current)</span></a>
       </li>
     </ul>
 
@@ -79,7 +73,7 @@
                     <label class="form-control" for="organizer">Organizer</label>       
           </div> 
           <div>
-            <small>Don't have an account ?<a href="register">Register now</a></small>
+            <small>Don't have an account ?<a href="register.php">Register now</a></small>
           </div>
        </div>
       <div class="modal-footer">
@@ -91,40 +85,34 @@
 </div>
   </div>
 </nav>
-<?php
-?>
-
-<div class="row">
-<?php
-  foreach($events as $e){
-?>
-     <div class="col-lg-4 col-sm-6 portfolio-item" style="padding: 10px 50px;">
-            <div class="card h-100">
-              <img class="card-img-top" src="http://placehold.it/700x400" alt="">
-              <div class="card-body">
-                <h4 class="card-title">
-                  <?php echo $e['event_title'];?>
-                </h4>
-                <p class="card-text"><?php echo $e['event_desc'];?></p>
-                <p class="card-text">Venue :<?php echo $e['event_venue'];?></p>
-                <p class="card-text">No. of Guest :<?php echo $e['event_guest'];?></p>
-                
-                <div>
-                  <label for="date">Date : <?php echo $e['event_date'];?></label>
-                  <label for="timeStart">Starting Time : <?php echo $e['event_start_time'];?></label>
-                  <label for="timeEnd">End Time : <?php echo $e['event_end_time'];?></label>
-                </div>
-              </div>
-              <button type="button"  class="text-dark nav-link btn btn-light btn-outline-light" data-toggle="modal" data-target="#exampleModal">
-                Join
-              </button>
-            </div>
-        </div>
-  <?php
- }
-  ?>
+<div class="container">
+<h2 class="title">Register Student</h2> 
+<form action="controller/studentController/addStud.php"  method="POST">
+<div class="form-group">
+  <label for="Idno">Idno</label>
+  <input type="number" class="form-control" id="Idno" placeholder="15387467" required name="idnumber">
 </div>
-
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="Firstname">Firstname</label>
+      <input type="text" class="form-control" id="Firstname" placeholder="Firstname" required name="fname">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="Lastname">Lastname</label>
+      <input type="text" class="form-control" id="Lastname" placeholder="Lastname" required name="lname">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="Email">Email</label>
+    <input type="email" class="form-control" id="Email" placeholder="Email" required name="email">
+  </div>
+  <div class="form-group">
+    <label for="Password">Password</label>
+    <input type="text" class="form-control" id="Password" placeholder="Password" required name="password">
+  </div>
+    <input class="btn btn-primary" type="submit" value="Register" name="register">
+</form>
+</div>
     <script src="view/assets/js/jquery.js"></script>
     <script src="view/assets/js/bootstrap.min.js"></script>
 </body>
