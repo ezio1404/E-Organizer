@@ -108,7 +108,7 @@
   </div>
   <div class="form-group">
     <label for="Password">Password</label>
-    <input type="text" class="form-control" id="Password" placeholder="Password" required name="password">
+    <input type="password" class="form-control" id="Password" placeholder="Password" required name="password">
   </div>
     <input class="btn btn-primary" type="submit" value="Register" name="register">
 </form>

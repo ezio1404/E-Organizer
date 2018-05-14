@@ -10,7 +10,7 @@ Class Event extends DBHelper{
         'event_end_time',
         'event_venue',
         'event_guest',
-        'event_organizer',
+        'org_idno',
         'event_avatar'
     );
 //constructor
