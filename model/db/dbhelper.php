@@ -127,9 +127,9 @@ function deleteRecord($table,$field_id,$ref_id){
     }
     
     //
-    function destroy(){
-        $this->conn=null;
-    }
+    // function destroy(){
+    //     $this->conn=null;
+    // }
     function getByRelation($table,$fields_id,$ref_id,$data){
         // $tables = implode(",",$table);
         $sql = "SELECT * FROM $table WHERE $fields_id = $ref_id AND $fields_id  = ?";
@@ -141,6 +141,18 @@ function deleteRecord($table,$field_id,$ref_id){
     function getAllRecordId($field,$table){
         $rows;
         $sql="SELECT $field FROM $table";
+        try{
+            $stmt=$this->conn->prepare($sql);
+            $stmt->execute();
+            $rows=$stmt->fetchAll(PDO::FETCH_ASSOC);
+        }catch(PDOException $e){ echo $e->getMessage();}
+        return $rows;
+    }
+
+    //----- STORED PROCEDure
+    function getProcedure($table){
+        $rows;
+        $sql="call display".$table."()";
         try{
             $stmt=$this->conn->prepare($sql);
             $stmt->execute();

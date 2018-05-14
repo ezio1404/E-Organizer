@@ -1,7 +1,7 @@
 <?php
   include 'model/eventModel.php';
   $event= new Event();
-  $events=$event->getAllEvent();
+  $events=$event->getProcEvent();
   $fields=$event->getFields();
 ?>
 <!DOCTYPE html>

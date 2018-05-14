@@ -46,5 +46,8 @@ function updateEvent($data,$ref_id){
     function getFields(){
         return $this->fields;
     }
+    function getProcEvent(){
+        return DBHelper::getProcedure($this->table);
+    }
 }
 ?>
