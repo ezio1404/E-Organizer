@@ -16,6 +16,9 @@
       <li class="nav-item">
         <a class="nav-link" href="event?id=<?php echo $_SESSION['user_id'].'?user='.$_SESSION['user_type'];?>">Events</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="report?id=<?php echo $_SESSION['user_id'].'?user='.$_SESSION['user_type'];?>">Reports</a>
+      </li>
       <?php
       }
       ?>

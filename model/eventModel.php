@@ -49,5 +49,8 @@ function updateEvent($data,$ref_id){
     function getProcEvent(){
         return DBHelper::getProcedure($this->table);
     }
+    function getAllLog(){
+        return DBHelper::getAllRecord("tbl_log");
+    }
 }
 ?>
